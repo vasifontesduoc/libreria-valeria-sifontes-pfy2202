@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-papel text-tinta font-texto leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-titulo;
+  }
+}
+
+/* Clases reutilizables */
+@layer components {
+  .titulo-pagina {
+    @apply font-titulo text-3xl sm:text-4xl font-bold text-vino-oscuro;
+  }
+
+  .panel {
+    @apply bg-white rounded-2xl shadow-suave p-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-bold px-5 py-2.5 rounded-full transition focus:outline-none focus-visible:ring-4 focus-visible:ring-vino-claro;
+  }
+
+  .btn-primario {
+    @apply bg-vino text-white hover:bg-vino-oscuro;
+  }
+
+  .btn-secundario {
+    @apply border-2 border-vino text-vino hover:bg-vino hover:text-white;
+  }
+
+  .etiqueta {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-bold bg-vino-claro text-vino-oscuro;
+  }
+}
